@@ -1,6 +1,7 @@
 import type { PropertyAgent, PropertyAgentForm } from '@/types/PropertyAgent'
 
-const BASE_URL = 'http://localhost:3000/api/agents'
+const BASE_URL =
+  import.meta.env.VITE_AGENT_API_BASE_URL ?? 'http://localhost:3000/api/agents'
 
 async function handleResponse<T>(response: Response): Promise<T> {
   if (!response.ok) {
