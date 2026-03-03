@@ -1,14 +1,18 @@
 import express from 'express';
+import cors from 'cors';
 
 const app = express();
-const port = process.env.PORT ?? 3000;
+const PORT = 3000;
 
+app.use(cors());
 app.use(express.json());
 
-app.get('/', (_req, res) => {
-  res.json({ message: 'Hello from Pure API' });
+
+// Health check
+app.get('/api/health', (_req, res) => {
+  res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Property Agent API running on http://localhost:${PORT}`);
 });
