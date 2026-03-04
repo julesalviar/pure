@@ -13,6 +13,12 @@ Pure is a monorepo containing:
 - **Client** — Vue 3 + Vite frontend with Vue Router
 - **API** — Express REST API with in-memory storage
 
+### Demo
+
+**[Live Demo](https://pure.julesalviar.com)** — [https://pure.julesalviar.com](https://pure.julesalviar.com)
+
+![Property Agent Manager Demo](./demo_screenshot.jpg)
+
 ### Features
 
 - **List agents** — View all property agents in a table
@@ -98,6 +104,15 @@ npm run preview
 ```sh
 npm run start:api
 ```
+
+### Deployment
+
+The live demo is deployed as follows:
+
+| Component | Platform |
+| --------- | -------- |
+| Frontend  | [Cloudflare Pages](https://pages.cloudflare.com/) |
+| Backend   | [GCP Cloud Run](https://cloud.google.com/run) + [Cloud Build](https://cloud.google.com/build) |
 
 ## API Endpoints
 
